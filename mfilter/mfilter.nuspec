@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mfilter</id>
+    <version>1.1.2</version>
+    <packageSourceUrl>https://github.com/zverev-iv/choco-mfilter</packageSourceUrl>
+    <owners>zverev-iv</owners>
+    <title>mfilter (Install)</title>
+    <authors>Dec Software</authors>
+    <projectUrl>https://www.tc4shell.com/en/7zip/mfilter/</projectUrl>
+    <copyright>2020 Dec Software</copyright>
+    <licenseUrl>https://www.tc4shell.com/en/termsofuse/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>mfilter 7zip 7-zip bmp pnm ppm pgm pam tiff dng raw tga wav caf w64 dff dsf aif afc sf2</tags>
+    <summary>MFilter is a filter plugin for the popular 7-Zip archiver designed to deliver higher compression ratios to certain multimedia file types</summary>
+    <description>MFilter is a filter plugin for the popular 7-Zip archiver designed to deliver higher compression ratios to certain multimedia file types by means of automatic pre-processing. The filter itself does not provide compression, and requires co-use of a compressing codec.
+
+Specifically, here is what MFilter does over the files being compressed:
+
+- The filter recompresses jpeg files using Brunsli or Lepton methods. This also applies to embedded thumbnails and jpeg files attached to or embedded into other files, like pdf.
+- The filter performs delta encoding of the following raster graphic file types:
+  - uncompressed bmp
+  - pnm (ppm, pgm, pam)
+  - uncompressed tiff
+  - uncompressed dng
+  - uncompressed raw (3fr, arw, nef and others)
+  - uncompressed tga
+-The filter uses the WavPack method to compress wav-files with uncompressed PCM audio. The following file types are automatically identified and compressed:
+  - wav (including bwf/rf64 и Multiple Data Chunks (Legasy Audition Format) formats)
+  - caf (Core Audio Format)
+  - w64 (Sony Wave64)
+  - dff (Philips DSDIFF)
+  - dsf (Sony DSD stream)
+  - aif, afc (Аudio Interchange File Format, including AIFF-C format)
+  - sf2 (SoundFont)
+- The filter decodes data in BASE64 format.
+- The filter applies BCJ, ARM, ARMT, IA64, SPARC and PPC filters to the corresponding executables.
+    </description>
+    <releaseNotes>Current version
+
+Plugin version: 1.1.2
+Distribution package release date: 13 Oct 2019
+    </releaseNotes>
+    <dependencies>
+        <dependency id="7zip.install" version="19.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
